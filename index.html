@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css" />
+    <title>dropswater</title>
+</head>
+<body onload="myFunction()">
+    <div id="loader">
+        <div class="loader-content">
+            <div class="drops lightblue"></div>
+            <div class="drops lightblue"></div>
+            <div class="box">
+                <div class="wave lightblue">
+
+                </div>
+            </div>
+            <div class="hilt">
+                <div class="handle">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-body">
+     <h1>Main page</h1>
+     <p>
+         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut architecto, nemo provident et, consequuntur odit dolorem sed consectetur blanditiis placeat eos enim, id adipisci sequi numquam! Necessitatibus ipsam doloribus accusamus.
+     </p>
+    </div>
+  <script>
+    var loader = document.getElementById('loader')
+    var bottom = -50;
+    function myFunction(){
+        
+        move();
+        loader.style.display = 'none';
+    }
+    function move(){
+        var id = setInterval(frame,2000);
+
+        function frame(){
+            if(bottom>=-30){
+                wave.style.bottom = bottom+"%";
+                bottom=bottom-10;
+            }else{
+                wave.style.bottom = bottom+"%";
+                bottom=bottom-(-10);
+            }
+        }
+    }
+  </script>
+</body>
+</html>
